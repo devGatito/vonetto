@@ -1,0 +1,33 @@
+<nav class="nav" [ngClass]="{ 'nav--active': menuOpen }">
+  <div class="nav_main">
+    <a href="/vonetto-residencial/" class="hide-from:l">
+      <img data-src="assets/logo-ruba.svg" width="120px" />
+    </a>
+    <label for="menu" id="open">
+      <img data-src="assets/icons/menu-h.svg" class="menu-icon" width="30" />
+    </label>
+    <input type="checkbox" id="menu" style="display: none" />
+    <div class="nav__content" [ngClass]="{ 'nav__content--open': menuOpen }">
+      <label for="menu"
+        ><img
+          data-src="assets/icons/close-menu.svg"
+          width="50"
+          class="menu-icon"
+      /></label>
+      <span class="nav__span">MENÚ</span>
+      <a class="nav__link" href="#conoce-vonetto" (click)="toggleMenu()"
+        >Conoce VONETTO</a
+      >
+      <a class="nav__link" href="#modelos" (click)="toggleMenu()">MODELOS</a>
+      <a class="nav__link" href="#ventajas" (click)="toggleMenu()">VENTAJAS</a>
+      <!-- <a class="nav__link" href="#galeria" (click)="toggleMenu()">Galería</a> -->
+      <a class="nav__link" href="#ubicacion" (click)="toggleMenu()"
+        >Ubicación</a
+      >
+      <a class="nav__link" href="#contacto" (click)="toggleMenu()"
+        >CONTÁCTANOS</a
+      >
+      <!-- <a class="nav__link" href="#promociones" (click)="toggleMenu()">Promociones</a> -->
+    </div>
+  </div>
+</nav>

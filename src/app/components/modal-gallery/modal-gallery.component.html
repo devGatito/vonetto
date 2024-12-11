@@ -1,0 +1,60 @@
+<div id="uiGallery">
+  <div class="flex:center width-20">
+    <div class="flex:wrapper">
+      <div class="header">
+        <h2 class="title">{{ title }}</h2>
+        <button class="closeButton" (click)="close()">
+          <img
+            class="icon"
+            src="assets/icons/closeB.svg"
+            width="25"
+            height="25"
+            alt="cerrar modal"
+          />
+          <span>Cerrar</span>
+        </button>
+      </div>
+      <div class="galleryGrid">
+        <div class="flex justify:center areaButton">
+          <button id="nextBtn" class="iconButton" (click)="forward()">
+            <img
+              src="assets/icons/arror.svg"
+              alt="imagen anterior"
+              style="transform: rotate(180deg)"
+            />
+          </button>
+        </div>
+
+        <div class="slider">
+          <div class="slider_container">
+            <div
+              class="gallery-slider flex flex:nowrap items:center justify:start"
+            >
+              <!-- render here images gallery -->
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify:center areaButton">
+          <button id="prevBtn" class="iconButton" (click)="back()">
+            <img data-src="assets/icons/arror.svg" alt="imagen anterior" />
+          </button>
+        </div>
+      </div>
+      <div class="flex p:2 mobileAreabutton">
+        <div class="flex justify:center gap:4">
+          <button class="iconButton" (click)="forward()">
+            <img
+              src="assets/icons/arror.svg"
+              alt="imagen anterior"
+              style="transform: rotate(180deg)"
+            />
+          </button>
+          <button class="iconButton" (click)="back()">
+            <img data-src="assets/icons/arror.svg" alt="imagen anterior" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,245 @@
+@font-face {
+  font-family: "Aquawax";
+  src: url("assets/fonts/Aquawax Light Trial.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Aquawax";
+  src: url("assets/fonts/Aquawax Medium Trial.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Aquawax";
+  src: url("assets/fonts/Aquawax Black Trial.ttf");
+  font-weight: 700;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --db-base-color: #181818;
+  --db-font-face: sans-serif;
+  --db-title-face: "Abrade", sans-serif;
+  --db-line-height: 1.4;
+  --db-small-relative: 90%;
+  --db-height-elements: 45px;
+
+  --primaryColor: #8e3209;
+  --softBeige: #eddbc9;
+  --darkColor: #404040;
+  --widthFull: 1280px;
+  --movileBreakpoint: 899px;
+
+  /*
+  * Definen el porcentaje o medida en pixeles a restar del 100%
+  * de la pantalla para establecer el limite de container: .flex:container
+  */
+  --db-wrap-m: 5%;
+  --db-wrap-tb: 10%;
+  --db-wrap-l: 15%;
+  --db-wrap-d: 20%;
+  --db-wrap-hd: 20%;
+  --db-wrap-w: 30%;
+
+  //Tamaños de texto para diferentes resoluciones
+  --db-font-base: 16px;
+  --db-size-xs: 12px;
+  --db-size-sm: 14px;
+  --db-size-md: 20px;
+  --db-size-lg: 25px;
+  --db-size-tl: 40px;
+  --db-size-jb: 60px;
+  --db-size-hr: 80px;
+  --db-size-mg: 150px;
+
+  //radius
+  --db-radius-sm: 4px;
+  --db-radius-md: 12px;
+  --db-radius-lg: 18px;
+  --db-radius-fluid: 100%;
+
+  // ajustes de media queries
+  --db-breakpoint-m: 320px;
+  --db-breakpoint-tb: 765px;
+  --db-breakpoint-l: 1020px;
+  --db-breakpoint-d: 1360px;
+  --db-breakpoint-hd: 1430px;
+  --db-breakpoint-w: 1910px;
+}
+
+//Tema de los componentes CSS
+$primary: #8e3209;
+$secondary: #eddbc9;
+$white: #ffffff;
+$black: #000000;
+$smoke: #f6f6f6;
+$dark: #404040;
+$gray: #717d7d;
+
+//Colores de estado para elmentos input, etc.
+$state-danger: #c51533;
+$state-warning: #000000;
+$state-info: #157bc5;
+$state-success: #00c850;
+
+@import "dbgrid/scss/lib";
+@include create-color-palette($colors, $tones);
+
+body.overflowHide {
+  overflow: hidden !important;
+}
+
+img {
+  transition: opacity 300ms linear;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.ui\:button {
+  width: 100%;
+
+  &.theme\:accent {
+    background-color: var(--db-primary) !important;
+    color: var(--db-white);
+  }
+  &.theme\:secondary {
+    background-color: var(--db-smoke);
+    color: #2c4b38;
+  }
+
+  &.theme\:secondary:hover {
+    color: white;
+  }
+
+  &.theme\:altern {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: var(--db-white);
+  }
+
+  &.theme\:form {
+    background-color: #8E3209 !important;
+    color: var(--db-white);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+}
+
+ul {
+  list-style: circle;
+}
+
+.title {
+  color: var(--lightColor);
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+.title-span {
+  color: var(--lightColor);
+  font-weight: 400;
+  font-style: italic;
+}
+
+// ====================================
+// ===== Globals =====
+// ====================================
+
+.button-primary {
+  background-color: var(--primaryColor);
+  min-height: 56px;
+  color: white;
+  line-height: 30px;
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 60px;
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.button-secondary {
+  background-color: #f3efe4;
+  min-height: 56px;
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0px 50px;
+
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  color: var(--primaryColor);
+  width: auto;
+  max-width: 487px;
+  font-weight: 700;
+  font-style: normal;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+img {
+  opacity: 0;
+  transition: opacity 200ms ease-out;
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+@import "dbgrid/scss/lib";
+
+body.thanks {
+  app-folleto-modal,
+  app-form,
+  app-modal-gallery,
+  app-whatsapp-form,
+  app-popup {
+    &,
+    & * {
+      transform: scale(0) !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+}

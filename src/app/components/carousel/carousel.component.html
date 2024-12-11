@@ -1,0 +1,22 @@
+<div class="carousel">
+  <div class="{{ class }}">
+    <img
+      *ngFor="let img of images; let i = index"
+      [src]="img"
+      [ngClass]="{ active: currentIndex === i }"
+    />
+
+    <div class="carousel__control">
+      <button
+        *ngFor="let img of images; let i = index"
+        (click)="showImage(i)"
+        [style.background-color]="currentIndex === i ? '#ffffff' : '#ffffff7a'"
+      ></button>
+    </div>
+
+    <span class="legal"
+      >*Imagenes con fines ilustrativos, pueden variar sin previo aviso.
+      Consulta términos y condiciones en ruba.mx/tyc.</span
+    >
+  </div>
+</div>

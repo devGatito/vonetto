@@ -1,0 +1,72 @@
+<section class="department" id="modelos">
+  <div class="information">
+    <div class="carousel" id="carousel-content">
+      <div *ngFor="let item of departmentInfo">
+        <div class="info-section">
+          <div class="flex:center" style="flex-direction: column">
+            <p class="title-model">
+              MODELO <span>{{ item.modelo }}</span>
+            </p>
+            <p class="t:center mb:1">{{ item.price }}</p>
+            <div class="flex:center">
+              <ng-container *ngIf="item.modelo === 'lirio'">
+                <button class="button-secondary open-form">
+                  Notificarme disponiblidad
+                </button>
+              </ng-container>
+            </div>
+          </div>
+          <div>
+            <ul class="list">
+              <li>2 Niveles</li>
+              <li>{{ item.recamaras }} Recámaras con espacio para closet.</li>
+              <li>1.5 Baños</li>
+              <li>Lavandería exterior</li>
+              <li>Estacionamientos para 2 autos.</li>
+            </ul>
+            <div class="image-content">
+              <img src="{{ item.pb }}" class="loaded" />
+              <img src="{{ item.pa }}" class="loaded" />
+            </div>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="{{ item.mainImg }}" class="loaded" width="500" />
+          <span class="legal"
+            >*Imagenes con fines ilustrativos, pueden variar sin previo aviso.
+            Consulta términos y condiciones en ruba.com.mx/tyc.</span
+          >
+          <div class="information-desc" id="{{ item.modelo }}">
+            <p>
+              {{ item.construccion }} M<sup>2</sup>
+              <br />
+              <span>Construcción</span>
+            </p>
+            <p>
+              {{ item.terrain }} m<sup>2</sup><br />
+              <span>Terreno</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="selector mt:2"
+      [ngClass]="{ 'reversed': currentItem.modelo === 'lirio' }"
+    >
+
+      <p
+        class="selected"
+        id="lirio-opt"
+        (click)="onClickSelector($event, 'aralia')"
+      >
+        LIRIO
+      </p>
+      <p id="aralia-opt" (click)="onClickSelector($event, 'lirio')">ARALIA</p>
+
+      <span></span>
+   
+    </div>
+  
+  </div>
+</section>

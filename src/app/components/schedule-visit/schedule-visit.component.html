@@ -1,0 +1,109 @@
+<section class="visit" id="conoce-vonetto">
+  <div class="visit__content">
+    <div class="visit__top">
+      <div class="visit__wrapper">
+        <div>
+          <img data-src="assets/icons/aldaba2.svg" alt="" />
+        </div>
+
+        <div class="visit__texts">
+          <p class="visit__paragraph">
+            Descubre <span>Torres ALDABA</span> en Puebla, el lugar donde
+            comienza tu historia. Imagina
+            <span> un espacio diseñado para crear memorias inolvidables</span>,
+            donde cada detalle ha sido pensado para ofrecerte una vida
+            inigualable.
+          </p>
+
+          <p class="visit__paragraph">
+            Este desarrollo vertical te brinda la oportunidad de vivir en un
+            entorno exclusivo y moderno, perfecto para quienes buscan calidad y
+            confort.
+          </p>
+        </div>
+
+        <button class="button-primary open-form">AGENDAR UNA VISITA</button>
+      </div>
+
+      <div class="visit__slider">
+        <div class="visit__control">
+          <button
+            *ngFor="let img of images; let i = index"
+            (click)="showImage(i)"
+            [style.background-color]="
+              currentIndex === i ? '#003748' : '#00394a40'
+            "
+          ></button>
+        </div>
+
+        <div class="visit__slider-images">
+          <img
+            *ngFor="let img of images; let i = index"
+            [src]="img"
+            [ngClass]="{ active: currentIndex === i }"
+          />
+
+          <div class="visit__leyenda">
+            <p>
+              *Imagen con fin ilustrativo, puede variar sin previo aviso.
+              Consulta términos y condiciones en ruba.com.mx/tyc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="visit__bottom">
+      <div class="visit__wrapper">
+        <div>
+          <h1 class="title">
+            ECHA UN VISTAZO<br /><span class="title-span"
+              >a tu nuevo entorno</span
+            >
+          </h1>
+        </div>
+
+        <div class="visit__diamond"></div>
+
+        <div class="visit__texts">
+          <p class="visit__paragraph2">
+            <span>Haz click</span> y <span>echa un vistazo</span> e a Torres
+            ALDABA sin salir de casa
+          </p>
+        </div>
+
+        <div class="visit__view">
+          <div class="visit__social">
+            <img data-src="assets/icons/explorerw.svg" alt="icon" />
+            <a
+              target="_blank"
+              href="https://urldefense.com/v3/__https://api2.enscape3d.com/v3/view/link/9562669e-02d6-472f-8d09-0cc465a50722/7749612f-224d-444d-b429-3b51fe6029a9__;!!HbFy4hIJirAKbg!S3MRv5nGBqYhAK2BK0NRIongZBUK9ShzOzlgdEgMbesgUT1a-IwYUTqYmrb8rVn8GQR-C5T_AMxZJKc7ds_Nyg$"
+            >
+              Ver estacionamiento
+            </a>
+          </div>
+          <div class="visit__social">
+            <img data-src="assets/icons/explorerw.svg" alt="icon" />
+            <a
+              target="_blank"
+              href="https://urldefense.com/v3/__https://api2.enscape3d.com/v3/view/link/c028e105-ef14-489c-97be-7a8ec93b4861/75700852-262f-4aa7-9827-87dd269d2ac7__;!!HbFy4hIJirAKbg!S3MRv5nGBqYhAK2BK0NRIongZBUK9ShzOzlgdEgMbesgUT1a-IwYUTqYmrb8rVn8GQR-C5T_AMxZJKdGypdsiw$"
+            >
+              Ver área común
+            </a>
+          </div>
+          <div class="visit__social">
+            <img data-src="assets/icons/explorerw.svg" alt="icon" />
+            <a
+              target="_blank"
+              href="https://urldefense.com/v3/__https://api2.enscape3d.com/v3/view/link/06502610-fa8d-4284-b9b4-796542d860b3/2a9e8ac8-ffbf-4685-906e-cfec1a0fc12a__;!!HbFy4hIJirAKbg!S3MRv5nGBqYhAK2BK0NRIongZBUK9ShzOzlgdEgMbesgUT1a-IwYUTqYmrb8rVn8GQR-C5T_AMxZJKcESDpY1g$"
+            >
+              Ver acceso principal
+            </a>
+          </div>
+        </div>
+
+        <button class="button-secondary open-form">AGENDAR UNA VISITA</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="gallery" id="ventajas" >
+  <span id="clith"></span>
+  <div id="amenidades">
+    <p>AMENIDADES</p>
+    <div>
+      <div class="item" *ngFor="let i of amenidades">
+        <img src={{i.icon}} class="loaded">
+        <p>{{i.title}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="galeria" class="gallery__grid-container">
+    <div class="gallery__grid-item gallery__grid-item--large">
+      <div class="gallery__img-container">
+          <span>*Imagenes con fines ilustrativos, pueden variar sin previo aviso. Consulta términos y condiciones en ruba.com.mx/tyc.</span>
+        <picture
+          class="gallery__picture button-open-gallery"
+          data-gallery="amenidades"
+        >
+          <img
+            class="gallery__img"
+            data-src="assets/images/VON-PLAYG-4096.jpg"
+            type="image/webp"
+            alt="imagen 1"
+          />
+        </picture>
+      </div>
+      <div class="gallery__img-container">
+          <span>*Imagenes con fines ilustrativos, pueden variar sin previo aviso. Consulta términos y condiciones en ruba.com.mx/tyc.</span>
+        <picture
+          class="gallery__picture button-open-gallery"
+          data-gallery="amenidades"
+        >
+          <img
+            class="gallery__img"
+            data-src="assets/images/VON-PARK4-4096.jpg"
+            type="image/webp"
+            alt="imagen 2"
+          />
+        </picture>
+      </div>
+    </div>
+    <div class="gallery__grid-item gallery__grid-item--large">
+      <div class="gallery__img-container">
+          <span>*Imagenes con fines ilustrativos, pueden variar sin previo aviso. Consulta términos y condiciones en ruba.com.mx/tyc.</span>
+        <picture
+          class="gallery__picture button-open-gallery"
+          data-gallery="amenidades"
+        >
+          <img
+            class="gallery__img"
+            data-src="assets/images/VON-PAL1-4096.jpg"
+            type="image/webp"
+            alt="imagen 5"
+          />
+        </picture>
+      </div>
+      <div class="gallery__img-container">
+          <span>*Imagenes con fines ilustrativos, pueden variar sin previo aviso. Consulta términos y condiciones en ruba.com.mx/tyc.</span>
+        <picture
+          class="gallery__picture button-open-gallery"
+          data-gallery="amenidades"
+        >
+          <img
+            class="gallery__img"
+            data-src="assets/images/VON-CANCHA-4096.jpg"
+            type="image/webp"
+            alt="imagen 6"
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+.brochure {
+  background-color: var(--primaryColor);
+  &__content {
+    padding: 50px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 819px;
+    margin: auto;
+    gap: 40px;
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--softBeige);
+
+    @media screen and (min-width: 768px) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+  &__title span {
+    font-weight: 400;
+    color: var(--lightColor);
+    font-style: italic;
+  }
+  &__paragraph {
+    color: var(--softBeige);
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    text-wrap: balance;
+  }
+}

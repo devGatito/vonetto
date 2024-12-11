@@ -1,0 +1,122 @@
+.carousel {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #000;
+
+  .legal {
+    background-color: rgb(from black r g b / 10%);
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0 0 30px 0;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -60px;
+    z-index: 20;
+  }
+
+  &__control button {
+    background-color: #00394a6f;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+  }
+  &__control button:hover {
+    background-color: #f0f0f0;
+  }
+  &__slider-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  &__slider-images-thin {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: 768px) {
+      height: 500px;
+    }
+
+    & > .carousel__control button {
+      background-color: #00394a6f;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 60px;
+      height: 8px;
+      min-height: 8px;
+    }
+    & > .carousel__control button:hover {
+      background-color: #f0f0f0;
+    }
+  }
+  &__slider-images img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 3s ease-in-out;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+  }
+  &__slider-images-thin img.active {
+    opacity: 1;
+    position: relative;
+  }
+
+  &__slider-images-thin img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 3s ease-in-out;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;
+  }
+  &__slider-images img.active {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+
+
+
