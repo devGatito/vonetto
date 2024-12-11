@@ -11,7 +11,9 @@ import { DepartmentComponent } from '../../components/department/department.comp
 import { WelcomeSectionComponent } from '../../components/welcome-section/welcome-section.component';
 import { FolletoModalComponent } from '../../components/folleto-modal/folleto-modal.component';
 import { PromoModalComponent } from "../../components/promo-modal/promo-modal.component";
-
+import { PopupComponent } from '../../components/popup/popup.component';
+import { WhatsappFormComponent } from '../../components/whatsapp-form/whatsapp-form.component';
+import { FormComponent } from '../../components/form/form.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -19,6 +21,8 @@ import { PromoModalComponent } from "../../components/promo-modal/promo-modal.co
     HeaderComponent,
     FooterComponent,
     HeaderComponent,
+    WhatsappFormComponent,
+    PopupComponent,
     MoreInformationComponent,
     LocationComponent,
     BrochureComponent,
@@ -28,7 +32,8 @@ import { PromoModalComponent } from "../../components/promo-modal/promo-modal.co
     GalleryComponent,
     ModalGalleryComponent,
     FolletoModalComponent,
-    PromoModalComponent
+    PromoModalComponent,
+    FormComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

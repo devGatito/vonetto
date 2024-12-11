@@ -18,26 +18,32 @@ export class PromoModalComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    // Escucha el evento de scroll
     window.addEventListener('scroll', this.onScroll.bind(this));
   }
 
   ngOnDestroy(): void {
-    // Limpia el evento de scroll
     window.removeEventListener('scroll', this.onScroll.bind(this));
   }
 
   onScroll() {
     if (!this.visible && window.scrollY > 200) {
-      this.modal?.classList.remove('hidden');
-      this.modal?.showModal();
+      this.showModal();
       this.visible = true;
     }
   }
 
-  onClose() {
+  showModal() {
+    this.modal?.classList.remove('hidden');
+    this.modal?.showModal();
+  }
+
+  closeModal() {
     this.modal?.classList.add('hidden');
     this.modal?.close();
+  }
+
+  onClose() {
+    this.closeModal();
   }
 
   agendarCita() {
@@ -45,6 +51,6 @@ export class PromoModalComponent implements AfterViewInit, OnDestroy {
       top: 0,
       behavior: 'smooth',
     });
-    this.onClose();
+    this.closeModal();
   }
 }
